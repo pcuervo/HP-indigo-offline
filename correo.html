@@ -5,10 +5,8 @@
     <link rel="apple-touch-icon" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <meta name="viewport" content="initial-scale=1, maximum-scale=2">
-
     <meta charset="UTF-8">
     <title>HP Indigo | Correo directo e impresión transaccional</title>
-
     <!--[if lt IE 9]>
         <script src="dist/html5shiv.js"></script>
     <![endif]-->
@@ -82,12 +80,12 @@ Aumente el valor de los envíos de transacciones de los clientes con las prensas
                         </ul>
                     </div>
                     <div class="seccion-segmento video" id="tendencias">
-                    	<video id='boxvid' controls>
+                    	<video id='boxvid' class="[ video-local ]" controls>
                             <source src="vid/a-correo.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="seccion-segmento video" id="videos">
-                        <video id='boxvid' controls>
+                        <video id='boxvid' class="[ video-local ]" controls>
                             <source src="vid/correo.mp4" type="video/mp4">
                         </video>
                     </div><!-- videos -->
@@ -185,7 +183,8 @@ Aumente el valor de los envíos de transacciones de los clientes con las prensas
     <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
-		lightboxImg();
+		stopLocalVideo();
+        lightboxImg();
 	</script>
 </body>
 </html>

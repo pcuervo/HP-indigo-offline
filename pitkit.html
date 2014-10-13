@@ -5,10 +5,8 @@
     <link rel="apple-touch-icon" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <meta name="viewport" content="initial-scale=1, maximum-scale=2">
-
     <meta charset="UTF-8">
     <title>HP Indigo | Pit Kit</title>
-
     <!--[if lt IE 9]>
         <script src="dist/html5shiv.js"></script>
     <![endif]-->
@@ -99,7 +97,7 @@
                 </div>
                 <div class="contenido-video">
                     <div class="frame-video">
-                        <video id='boxvid' controls>
+                        <video id='boxvid' class="[ video-local ]" controls>
                             <source src="vid/pitkit.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -181,6 +179,7 @@
     <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
+        stopLocalVideo();
 		slider();
 	</script>
 </body>

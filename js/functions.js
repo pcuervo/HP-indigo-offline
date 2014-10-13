@@ -68,6 +68,7 @@ $( document ).ready(function() {
 				content.css('height',altura_content);
 		});
 	} // ajustarAlturaMenu
+
 	function resetInfo() {
 	// Esconde la info y le quita el estado de activo al menu
 		var ap = document.getElementById("aplicaciones");
@@ -95,6 +96,7 @@ $( document ).ready(function() {
 			viLink.className = "";
 		}
 	} // resetInfo
+
 	function muestraInfo(id){
 	// resetea la info y muestra la pestaña correspondiente al ID
 		resetInfo();
@@ -113,4 +115,15 @@ $( document ).ready(function() {
 		id = id.replace("Link", "");
 		muestraInfo(id);
 	} // cambiaTab
+
+	function stopVideo() {
+		var pauseButton = $('#stop, #menu_segmentos a, .botones-historia a, .botones-adicionales a');
+        pauseButton.on('click', function(e){
+            e.preventDefault();
+            stopVideo();
+        });
+    	player.stopVideo(0);
+    	if(typeof player1 !== "undefined"){
+    		player1.stopVideo(0);
+	}
 });

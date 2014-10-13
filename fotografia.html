@@ -5,10 +5,8 @@
     <link rel="apple-touch-icon" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <meta name="viewport" content="initial-scale=1, maximum-scale=2">
-
     <meta charset="UTF-8">
     <title>HP Indigo | Fotografía</title>
-
     <!--[if lt IE 9]>
         <script src="dist/html5shiv.js"></script>
     <![endif]-->
@@ -21,20 +19,15 @@
                     <img src="images/hp_logo.png" alt="HP Indigo" />
                 </a>
             </div><!-- logo -->
-
             <h1>
                 <a href="index.html">
                     HP Indigo & IHPS
                 </a>
             </h1>
-
             <p class="instruccion">Presiona el botón de tu interés</p>
         </header><!-- header -->
-
         <div class="main clearfix">
-
             <div class="content left clearfix">
-
                 <div class="descripcion clearfix">
                     <img src="images/fotografia_azul.png" alt="" class="icono left">
                     <div class="info_aplicacion left">
@@ -85,19 +78,16 @@
                         	<li><a href="WS6600p.html">HP Indigo WS6600p</a></li>
                         </ul>
                     </div><!-- seccion-segmento -->
-
                     <div class="seccion-segmento video" id="tendencias">
-                    	<video id='boxvid' controls>
+                    	<video id='boxvid' class="[ video-local ]" controls>
                             <source src="vid/a-fotografia.mp4" type="video/mp4">
                         </video>
                     </div>
-
                     <div class="seccion-segmento video" id="videos">
-                        <video id='boxvid' controls>
+                        <video id='boxvid' class="[ video-local ]" controls>
                             <source src="vid/fotografia.mp4" type="video/mp4">
                         </video>
                     </div><!-- videos -->
-
                 </div><!-- main_content -->
             </div><!-- content -->
             <div class="lightbox-container">
@@ -197,6 +187,7 @@
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		lightboxImg();
+        stopLocalVideo();
 	</script>
 </body>
 </html>

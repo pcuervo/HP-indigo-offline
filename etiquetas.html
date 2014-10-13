@@ -72,12 +72,12 @@
                         </ul>
                     </div>
                     <div class="seccion-segmento video" id="tendencias">
-                    	<video id='boxvid' controls>
+                    	<video id="boxvid" class="[ video-local ]" controls>
                             <source src="vid/a-etiquetas.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="seccion-segmento video" id="videos">
-                        <video id='boxvid' controls>
+                        <video id="boxvid" class="[ video-local ]" controls>
                             <source src="vid/etiquetas.mp4" type="video/mp4">
                         </video>
                     </div><!-- videos -->
@@ -158,7 +158,6 @@
                         <p>Prensas digitales</p>
                     </a>
                 </li>
-
                 <li>
                     <a href="adicionales.html">
                         <img src="images/adicional.png" alt="Adicional">
@@ -168,13 +167,13 @@
             </ul> <!-- menu-horizontal -->
         </div><!-- main -->
     </div><!--container-->
-
     <!-- js aquí para mejorar rendimiento -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
 		lightboxImg();
+        stopLocalVideo();
 	</script>
 </body>
 </html>

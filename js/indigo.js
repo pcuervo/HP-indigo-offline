@@ -6,20 +6,6 @@
 *****************************************/
 $( document ).ready(function() {
 
-
-	//Screensvaer
-	setTimeout(function() {
-
-		$('.container').after("<div class='screensaver'> <img class='logo_screensaver' src='images/logo_screensaver.png'alt='HP'><div class='screensaver_centrar'><div class='screensaver_inner video'><iframe src='http://player.vimeo.com/video/85501048?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;autoplay=1' width='500' height='375' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div><img class='tocar' src='images/tocar.png'></div>");
-		$('.screensaver').show();
-		$('.video').fitVids();
-
-		$('.screensaver').on('click', function(){
-			window.location = 'http://hpindigo.com.mx';
-		});
-
-	}, 330000);
-
 	//FANCYBOX IFRAME
 	if ( $('.iframebox').length > 0 ){
 		$('.iframebox').fancybox();
@@ -61,7 +47,6 @@ $( document ).ready(function() {
 	if(menuAdicionales[0] != null) {
 		muestraInfoAdicionales("aurasma");
 		menuAdicionales[0].addEventListener("click", cambiaTabAdicionales, false);
-		console.log('g');
 		jQuery('#indigo-env').fitVids();
 	}
 
@@ -70,7 +55,6 @@ $( document ).ready(function() {
 		muestraInfoHabilitadores("servicio");
 		menuHabilitadores[0].addEventListener("click", cambiaTabHabilitadores, false);
 	}
-
 });
 
 
@@ -371,13 +355,10 @@ $( document ).ready(function() {
 
 	function lightboxIFrame() {
 	    $(".botones-prensa li a#video").click(function () {
-
 	        $(".lightbox-container").css("display", "block");
-
 	        $(".lightbox-media a").click(function () {
 	            $(".lightbox-container").css("display", "none");
 	        });
-
 	        $('body').animate(
 	    		{ scrollTop:0 }, '500'
 	    	);
@@ -386,13 +367,10 @@ $( document ).ready(function() {
 
 	function lightboxHabilitadores() {
 	    $("a#videoHabilitadores").click(function () {
-
 	        $(".lightbox-container").css("display", "block");
-
 	        $(".lightbox-media a").click(function () {
 	            $(".lightbox-container").css("display", "none");
 	        });
-
 	        $('body').animate(
 	    		{ scrollTop:0 }, '500'
 	    	);
@@ -402,22 +380,14 @@ $( document ).ready(function() {
 	function lightboxImg() {
 	    $("#aplicaciones ul li a").click(function () {
 			var id = $(this).attr("id");
-
 			escondeImgLightbox();
-
 			$(".frame-img img#img-" + id).css("display", "block");
 	        var titulo = $(".frame-img img#img-" + id).attr("alt");
 			$(".lightbox-media h2").text(titulo);
-
 			$(".lightbox-container").css("display", "block");
-
-
 	        $(".lightbox-media a").click(function () {
 	            $(".lightbox-container").css("display", "none");
 	        });
-
-
-
 	        $('body').animate(
 	    		{ scrollTop:0 }, '500'
 	    	);
@@ -431,7 +401,6 @@ $( document ).ready(function() {
 	//Fitvids
 	$(function(){
 		if ( $('.video').length > 0 ){
-			console.log('d');
 			$('.video').fitVids();
 		}
 	});
@@ -519,11 +488,18 @@ $( document ).ready(function() {
 			:
 				(add ? window.attachEvent : window.detachEvent)('onmessage', listener);
 		}
-
-
-
 	}
 
-
-
-
+	function stopLocalVideo(videoElement){
+		var stopButton = $('#stop, #menu_segmentos a, .botones-historia a, .botones-adicionales a');
+		stopButton.on('click', function(){
+            console.log('stopLocalVideo');
+            if ( videoElement ){
+            	$(videoElement).get(0).pause();
+            }
+            $('.video-local').each(function(){
+				console.log( $(this) );
+				$(this).get(0).pause();
+            });
+		});
+	}
