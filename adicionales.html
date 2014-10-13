@@ -118,12 +118,12 @@
                     	<div class="contenido-slider">
                             <div class="slider-vid">
                                 <div class="video1 activo video" id="1" >
-                                    <video controls>
+                                    <video class="[ video-local ]" controls>
                                         <source src="vid/20000.mp4" type="video/mp4">
                                     </video>
                                 </div>
                                 <div class="video2 video" id="2">
-                                    <video controls>
+                                    <video class="[ video-local ]" controls>
                                         <source src="vid/30000.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -228,6 +228,7 @@
                 stopVimeo('#boxvid');
             });
         });
+        stopLocalVideo();
     </script>
 </body>
 </html>

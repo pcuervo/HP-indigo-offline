@@ -491,7 +491,7 @@ $( document ).ready(function() {
 	}
 
 	function stopLocalVideo(videoElement){
-		var stopButton = $('#stop, #menu_segmentos a, .botones-historia a, .botones-adicionales a');
+		var stopButton = $('#stop, #menu_segmentos a, .botones-historia a, .botones-adicionales a, .control-slider-vid a');
 		stopButton.on('click', function(){
             console.log('stopLocalVideo');
             if ( videoElement ){
