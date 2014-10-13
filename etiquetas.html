@@ -57,30 +57,29 @@
 
                 <div class="main-content left">
                     <div class="seccion-segmento" id="aplicaciones">
-                    	<ul>
-                        	<li><a href="#" id="comida">Etiquetas para comida y bebidas</a></li>
+                        <ul>
+                            <li><a href="#" id="comida">Etiquetas para comida y bebidas</a></li>
                             <li><a href="#" id="farma">Productos farmacéuticos</a></li>
                             <li><a href="#" id="cosmeticos">Cosméticos</a></li>
                             <li><a href="#" id="domesticos">Artículos domésticos</a></li>
                         </ul>
                     </div>
                     <div class="seccion-segmento" id="soluciones">
-                    	<ul>
-                        	<li><a href="WS4600.html">HP Indigo WS4600</a></li>
-                        	<li><a href="WS6600.html">HP Indigo WS6600</a></li>
+                        <ul>
+                            <li><a href="WS4600.html">HP Indigo WS4600</a></li>
+                            <li><a href="WS6600.html">HP Indigo WS6600</a></li>
+                            <li><a href="WS6800.html">HP Indigo WS6800</a></li>
                             <li><a href="20000.html">HP Indigo 20000</a></li>
                         </ul>
                     </div>
-                    <div class="seccion-segmento video" id="tendencias">
-                    	<video id='boxvid' controls>
+                    <div class="seccion-segmento video vimeoWrap" id="tendencias">
+                        <video id='boxvid' controls>
                             <source src="vid/a-etiquetas.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="seccion-segmento video" id="videos">
-                        <video id='boxvid' controls>
-                            <source src="vid/etiquetas.mp4" type="video/mp4">
-                        </video>
-                    </div><!-- videos -->
+                        <div id="player"></div>
+                    </div>
                 </div><!-- main_content -->
             </div><!-- content -->
             <div class="lightbox-container">
@@ -174,7 +173,18 @@
     <script type="text/javascript" src="js/fitvids.js"></script>
     <script type="text/javascript" src="js/indigo.js"></script>
     <script>
-		lightboxImg();
-	</script>
+        lightboxImg();
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'UjM3n4cftZw',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+            $('.video').fitVids();
+        }
+        stopVimeoSegmento();
+    </script>
 </body>
 </html>
