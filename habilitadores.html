@@ -156,7 +156,7 @@
                 <div class="lightbox-container">
                 <div class="lightbox-media">
                     <div class="frame-video" id="yt-video">
-                        <video id='boxvid' controls>
+                        <video class="[ video-local ]" id='boxvid' controls>
                             <source src="vid/frank.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -252,12 +252,7 @@
 		slider("dscoop");
 		slider("graphic");
         lightboxHabilitadores();
-		$(document).ready(function(e) {
-            $("#stop").click(function(){
-				stopVimeo('#boxvid');
-			});
-        });
-        //stopVimeo('#boxvid');
+        stopLocalVideo();
 	</script>
 </body>
 </html>
